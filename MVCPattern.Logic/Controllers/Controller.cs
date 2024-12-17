@@ -2,7 +2,7 @@
 
 namespace MVCPattern.Logic.Controllers
 {
-    public sealed class Controller
+    public sealed class Controller : IController
     {
         #region fields
         private readonly Models.Model _model = new() { LanguageCode = "de" };
@@ -18,6 +18,20 @@ namespace MVCPattern.Logic.Controllers
             remove
             {
                 _model.NotifyEvent -= value;
+            }
+        }
+        public string Text
+        {
+            get
+            {
+                return _model.Text;
+            }
+        }
+        public string LanguageCode
+        {
+            get
+            {
+                return _model.LanguageCode;
             }
         }
         #endregion properties

@@ -3,21 +3,21 @@
     public class InputView
     {
         #region fields
-        private Controllers.Controller _controller;
+        private Controllers.IController _controller;
         #endregion fields
 
-        public InputView(Controllers.Controller controller)
+        public InputView(Controllers.IController controller)
         {
             _controller = controller;
         }
 
         public void Run()
         {
-            var input = string.Empty;
+            string? input;
 
             do
             {
-                Console.Write("Text: ");
+                Console.Write($"Text[{_controller.LanguageCode}]: ");
                 input = Console.ReadLine() ?? string.Empty;
                 _controller.SetText(input);
             } while (string.IsNullOrWhiteSpace(input) == false);
