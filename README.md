@@ -16,12 +16,12 @@
 
 ## Einführung
 
-Diese Solution implementiert eine einfache Anwendung eines MVC-Muster (Model-View-Controller) in C#. Dabei soll ein Text in einer bestimmten Sprache (z.B. deutsch de) eingegeben werden und anschließend in unterschiedliche Sprachen (z.B. en, fr, es usw.) übersetzt werden. Es besteht aus zwei Projekten:
+Diese Solution implementiert eine einfache Anwendung eines MVC-Patterns (Model-View-Controller) in C#. Dabei soll ein Text in einer bestimmten Sprache (z.B. deutsch de) eingegeben werden und anschließend in unterschiedliche Sprachen (z.B. en, fr, es usw.) übersetzt werden und entsprechend in der Konsole ausgegeben werden. Die Anwendung besteht aus zwei Projekten:
 
-* MVCPattern.ConApp
-  * Dieses Projekt verwendet die MVC-Komponenten aus dem `Logic`-Projekt und simuliert einen Text-Translator in verschiedene Sprachen.
-* MVCPattern.Logic
-  * Implementierung der einzelnen Komponenten des MVC-Patterns und den Zugriff auf den Translator.
+- MVCPattern.ConApp
+  - Dieses Projekt verwendet die MVC-Komponenten aus dem `Logic`-Projekt und simuliert einen Text-Translator in verschiedene Sprachen.
+- MVCPattern.Logic
+  - Implementierung der einzelnen Komponenten des MVC-Patterns und den Zugriff auf den Translator.
 
 ALs Translator wird die DeepL API verwendet.
 
@@ -31,20 +31,12 @@ Die folgende Abbildung zeigt den Aufbau und die Interaktion der einzelnen Anwend
 
 ![Abbildung](mvc_pattern.png)
 
-
 ```csharp
 MVCPattern/
-├── .gitattributes
-├── .gitignore
-├── .vscode/
-│   └── launch.json
 ├── MVCPattern.ConApp/
-│   ├── bin/
-│   ├── obj/
 │   ├── MVCPattern.ConApp.csproj
 │   └── Program.cs
 ├── MVCPattern.Logic/
-│   ├── bin/
 │   ├── Controllers/
 │   │   ├── Controller.cs
 │   │   └── IController.cs
@@ -66,15 +58,11 @@ MVCPattern/
 
 MVCPattern.ConApp
 
-Dieses Projekt ist die Konsolenanwendung, die als Einstiegspunkt dient. Die Hauptklasse ist
-
-Program
-
- in Program.cs.
+Dieses Projekt ist die Konsolenanwendung, die als Einstiegspunkt dient. Die Hauptklasse ist `Program` in Program.cs.
 
 MVCPattern.Logic
 
-Dieses Projekt enthält die Logik des MVC-Musters, einschließlich der Controller, Modelle, Views und des Übersetzers.
+Dieses Projekt enthält die Logik des MVC-Musters, einschließlich der Controller, Models, Views und des Übersetzers.
 
 ## Wichtige Klassen und Dateien
 
